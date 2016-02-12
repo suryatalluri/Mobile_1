@@ -1,18 +1,16 @@
-[
-  {
-    "name": "Common",
-    "type": "PARTIAL"
-  },
-  {
-    "name": "Login",
-    "type": "PAGE"
-  },
-  {
-    "name": "Main",
-    "type": "PAGE"
-  },
-  {
-    "name": "leftnav",
-    "type": "LEFTNAV"
-  }
-]
+[ {
+  "name" : "Common",
+  "type" : "PARTIAL"
+}, {
+  "name" : "Login",
+  "type" : "PAGE"
+}, {
+  "name" : "Main",
+  "type" : "PAGE"
+}, {
+  "name" : "Page",
+  "type" : "PAGE"
+}, {
+  "name" : "leftnav",
+  "type" : "LEFTNAV"
+} ]

@@ -1,0 +1,400 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "description" : "Swagger API documentation for FileService",
+    "version" : "2.0",
+    "title" : "FileServiceService Swagger Documentation",
+    "x-WM-SERVICE_TYPE" : "JavaService",
+    "x-WM-SERVICE_ID" : "FileService"
+  },
+  "basePath" : "",
+  "tags" : [ {
+    "name" : "FileController",
+    "x-WM-FULLY_QUALIFIED_NAME" : "com.mobile_1.fileservice.controller.FileController",
+    "x-WM-VERSION" : ""
+  } ],
+  "schemes" : [ "https", "http" ],
+  "paths" : {
+    "/file/downloadFile" : {
+      "get" : {
+        "tags" : [ "FileController" ],
+        "operationId" : "getDownloadFile",
+        "produces" : [ "application/octet-stream" ],
+        "parameters" : [ {
+          "name" : "file",
+          "in" : "query",
+          "required" : false,
+          "type" : "string",
+          "collectionFormat" : "multi",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
+          "x-WM-UUID" : "b7f1adca-5e21-4919-8cb0-c58720cd51c8",
+          "x-WM-EDITABLE" : true
+        }, {
+          "name" : "returnName",
+          "in" : "query",
+          "required" : false,
+          "type" : "string",
+          "collectionFormat" : "multi",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
+          "x-WM-UUID" : "d78efe2a-ffdd-4692-9836-778ad7f304f9",
+          "x-WM-EDITABLE" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/DownloadResponse",
+              "x-WM-TYPE_ARGUMENTS" : [ ]
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "e26d989a-538b-4111-8287-01ded05f6f79",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "x-WM-METHOD_IDENTIFIER" : "getDownloadFile-2--1824756249"
+      },
+      "x-WM-TAG" : "FileController",
+      "x-WM-BASE_PATH" : "/file",
+      "x-WM-COMPLETE_PATH" : "//file/downloadFile",
+      "x-WM-RELATIVE_PATH" : "/downloadFile"
+    },
+    "/file/downloadFileAsInline" : {
+      "get" : {
+        "tags" : [ "FileController" ],
+        "operationId" : "getDownloadFileAsInline",
+        "produces" : [ "application/octet-stream" ],
+        "parameters" : [ {
+          "name" : "file",
+          "in" : "query",
+          "required" : false,
+          "type" : "string",
+          "collectionFormat" : "multi",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
+          "x-WM-UUID" : "51ee13fd-6a4b-4ac0-be52-6ad14d7869ab",
+          "x-WM-EDITABLE" : true
+        }, {
+          "name" : "returnName",
+          "in" : "query",
+          "required" : false,
+          "type" : "string",
+          "collectionFormat" : "multi",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
+          "x-WM-UUID" : "362f2975-b778-441d-a41e-5d0dfd36a022",
+          "x-WM-EDITABLE" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/DownloadResponse",
+              "x-WM-TYPE_ARGUMENTS" : [ ]
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "bd74e1e4-c400-4e7e-a052-2bed68da3570",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "x-WM-METHOD_IDENTIFIER" : "getDownloadFileAsInline-2--1824756249"
+      },
+      "x-WM-TAG" : "FileController",
+      "x-WM-BASE_PATH" : "/file",
+      "x-WM-COMPLETE_PATH" : "//file/downloadFileAsInline",
+      "x-WM-RELATIVE_PATH" : "/downloadFileAsInline"
+    },
+    "/file/file" : {
+      "delete" : {
+        "tags" : [ "FileController" ],
+        "operationId" : "deleteFile",
+        "parameters" : [ {
+          "name" : "file",
+          "in" : "query",
+          "required" : false,
+          "type" : "string",
+          "collectionFormat" : "multi",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
+          "x-WM-UUID" : "d51d7f10-5478-4118-8b66-974840b5afc4",
+          "x-WM-EDITABLE" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "type" : "boolean"
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "baf98620-371b-4304-b7bf-814e1ed2c482",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "x-WM-METHOD_IDENTIFIER" : "deleteFile-1-1195260122"
+      },
+      "x-WM-TAG" : "FileController",
+      "x-WM-BASE_PATH" : "/file",
+      "x-WM-COMPLETE_PATH" : "//file/file",
+      "x-WM-RELATIVE_PATH" : "/file"
+    },
+    "/file/files" : {
+      "post" : {
+        "tags" : [ "FileController" ],
+        "operationId" : "listFiles",
+        "parameters" : [ {
+          "name" : "relativePath",
+          "in" : "query",
+          "required" : false,
+          "type" : "string",
+          "collectionFormat" : "multi",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
+          "x-WM-UUID" : "cab141bb-7581-4f9f-966b-ed33900234d3",
+          "x-WM-EDITABLE" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "type" : "array",
+              "uniqueItems" : false,
+              "items" : {
+                "$ref" : "#/definitions/FileService$WMFile",
+                "x-WM-TYPE_ARGUMENTS" : [ ]
+              }
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "c318caa6-6b76-424b-8597-44d2c917ed5f",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "x-WM-METHOD_IDENTIFIER" : "listFiles-2--911653759"
+      },
+      "x-WM-TAG" : "FileController",
+      "x-WM-BASE_PATH" : "/file",
+      "x-WM-COMPLETE_PATH" : "//file/files",
+      "x-WM-RELATIVE_PATH" : "/files"
+    },
+    "/file/uploadFile" : {
+      "post" : {
+        "tags" : [ "FileController" ],
+        "operationId" : "uploadFile",
+        "consumes" : [ "multipart/form-data" ],
+        "parameters" : [ {
+          "name" : "files",
+          "in" : "formData",
+          "required" : true,
+          "type" : "array",
+          "items" : {
+            "type" : "file"
+          },
+          "collectionFormat" : "multi",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "org.springframework.web.multipart.MultipartFile",
+          "x-WM-UUID" : "980f5fd2-1d0b-4d41-9a52-8a7eb8972c5a",
+          "x-WM-EDITABLE" : true,
+          "x-WM-RESOLVER" : "[Lorg.springframework.web.multipart.MultipartFile;"
+        }, {
+          "name" : "relativePath",
+          "in" : "query",
+          "required" : false,
+          "type" : "string",
+          "collectionFormat" : "multi",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String",
+          "x-WM-UUID" : "1b3bf722-953e-4dab-8f06-f039c8e869f7",
+          "x-WM-EDITABLE" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "type" : "array",
+              "uniqueItems" : false,
+              "items" : {
+                "$ref" : "#/definitions/FileService$FileUploadResponse",
+                "x-WM-TYPE_ARGUMENTS" : [ ]
+              }
+            }
+          }
+        },
+        "x-WM-OPERATION_UID" : "0adef4a8-0f6d-4659-91ea-c652497f292f",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "x-WM-METHOD_IDENTIFIER" : "uploadFile-3-1867751980"
+      },
+      "x-WM-TAG" : "FileController",
+      "x-WM-BASE_PATH" : "/file",
+      "x-WM-COMPLETE_PATH" : "//file/uploadFile",
+      "x-WM-RELATIVE_PATH" : "/uploadFile"
+    }
+  },
+  "definitions" : {
+    "MultipartFile" : {
+      "allOf" : [ {
+        "$ref" : "#/definitions/InputStreamSource"
+      }, {
+        "properties" : {
+          "size" : {
+            "type" : "integer",
+            "format" : "int64"
+          },
+          "originalFilename" : {
+            "type" : "string"
+          },
+          "name" : {
+            "type" : "string"
+          },
+          "bytes" : {
+            "type" : "array",
+            "uniqueItems" : false,
+            "items" : {
+              "type" : "string",
+              "format" : "byte"
+            }
+          },
+          "contentType" : {
+            "type" : "string"
+          },
+          "empty" : {
+            "type" : "boolean"
+          },
+          "inputStream" : {
+            "$ref" : "#/definitions/InputStream",
+            "x-WM-TYPE_ARGUMENTS" : [ ]
+          }
+        }
+      } ],
+      "x-WM-FULLY_QUALIFIED_NAME" : "org.springframework.web.multipart.MultipartFile",
+      "x-WM-TAGS" : [ "FileController" ]
+    },
+    "Downloadable" : {
+      "properties" : {
+        "contents" : {
+          "$ref" : "#/definitions/InputStream",
+          "x-WM-TYPE_ARGUMENTS" : [ ]
+        },
+        "inline" : {
+          "type" : "boolean"
+        },
+        "fileName" : {
+          "type" : "string"
+        },
+        "contentLength" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "contentType" : {
+          "type" : "string"
+        }
+      },
+      "x-WM-FULLY_QUALIFIED_NAME" : "com.wavemaker.runtime.file.model.Downloadable",
+      "x-WM-TAGS" : [ "FileController" ]
+    },
+    "FileService$FileUploadResponse" : {
+      "properties" : {
+        "errorMessage" : {
+          "type" : "string"
+        },
+        "length" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
+        "fileName" : {
+          "type" : "string"
+        },
+        "path" : {
+          "type" : "string"
+        },
+        "success" : {
+          "type" : "boolean"
+        },
+        "this$0" : {
+          "$ref" : "#/definitions/FileService",
+          "x-WM-TYPE_ARGUMENTS" : [ ]
+        }
+      },
+      "x-WM-FULLY_QUALIFIED_NAME" : "com.mobile_1.fileservice.FileService.FileUploadResponse",
+      "x-WM-TAGS" : [ "FileController" ]
+    },
+    "FileService" : {
+      "properties" : {
+        "fileServiceManager" : {
+          "$ref" : "#/definitions/FileServiceManager",
+          "x-WM-TYPE_ARGUMENTS" : [ ]
+        },
+        "uploadDirectory" : {
+          "type" : "file"
+        }
+      },
+      "x-WM-FULLY_QUALIFIED_NAME" : "com.mobile_1.fileservice.FileService",
+      "x-WM-TAGS" : [ "FileController" ]
+    },
+    "InputStreamSource" : {
+      "properties" : {
+        "inputStream" : {
+          "$ref" : "#/definitions/InputStream",
+          "x-WM-TYPE_ARGUMENTS" : [ ]
+        }
+      },
+      "x-WM-FULLY_QUALIFIED_NAME" : "org.springframework.core.io.InputStreamSource",
+      "x-WM-TAGS" : [ "FileController" ]
+    },
+    "InputStream" : {
+      "allOf" : [ {
+        "$ref" : "#/definitions/Closeable"
+      }, { } ],
+      "x-WM-FULLY_QUALIFIED_NAME" : "java.io.InputStream",
+      "x-WM-TAGS" : [ "FileController" ]
+    },
+    "Closeable" : {
+      "allOf" : [ {
+        "$ref" : "#/definitions/AutoCloseable"
+      }, { } ],
+      "x-WM-FULLY_QUALIFIED_NAME" : "java.io.Closeable",
+      "x-WM-TAGS" : [ "FileController" ]
+    },
+    "AutoCloseable" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "java.lang.AutoCloseable",
+      "x-WM-TAGS" : [ "FileController" ]
+    },
+    "FileServiceManager" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "com.wavemaker.runtime.file.manager.FileServiceManager",
+      "x-WM-TAGS" : [ "FileController" ]
+    },
+    "FileService$WMFile" : {
+      "properties" : {
+        "name" : {
+          "type" : "string"
+        },
+        "this$0" : {
+          "$ref" : "#/definitions/FileService",
+          "x-WM-TYPE_ARGUMENTS" : [ ]
+        },
+        "type" : {
+          "type" : "string"
+        },
+        "size" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
+        "path" : {
+          "type" : "string"
+        }
+      },
+      "x-WM-FULLY_QUALIFIED_NAME" : "com.mobile_1.fileservice.FileService.WMFile",
+      "x-WM-TAGS" : [ "FileController" ]
+    },
+    "DownloadResponse" : {
+      "allOf" : [ {
+        "$ref" : "#/definitions/Downloadable"
+      }, {
+        "properties" : {
+          "contentType" : {
+            "type" : "string"
+          },
+          "fileName" : {
+            "type" : "string"
+          },
+          "inline" : {
+            "type" : "boolean"
+          },
+          "contents" : {
+            "$ref" : "#/definitions/InputStream",
+            "x-WM-TYPE_ARGUMENTS" : [ ]
+          }
+        }
+      } ],
+      "x-WM-FULLY_QUALIFIED_NAME" : "com.wavemaker.runtime.file.model.DownloadResponse",
+      "x-WM-TAGS" : [ "FileController" ]
+    }
+  }
+}
